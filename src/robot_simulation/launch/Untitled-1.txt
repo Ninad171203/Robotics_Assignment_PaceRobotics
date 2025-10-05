@@ -1,0 +1,120 @@
+#A* Pathfinding Console + Pygame
+#Author: Ninad Metkar
+
+
+import heapq, pygame, sys, os, time, math, random # type: ignore
+
+#  Heuristic 
+def heuristic(a,b):
+    return math.sqrt((a[0]-b[0])**2 + (a[1]-b[1])**2)
+
+#  A* Algorithm 
+def astar(grid,start,goal):
+    rows,cols=len(grid),len(grid[0])
+    open_list=[(0,start)]
+    came_from={}
+    g_score={start:0}
+    visited=[]
+
+    directions=[(1,0,1),(-1,0,1),(0,1,1),(0,-1,1),
+                (1,1,1.4),(1,-1,1.4),(-1,1,1.4),(-1,-1,1.4)]
+
+    while open_list:
+        _,curr=heapq.heappop(open_list)
+        visited.append(curr)
+        if curr==goal:
+            path=[goal]
+            while curr in came_from:
+                curr=came_from[curr]
+                path.append(curr)
+            return visited,path[::-1]
+
+        for dx,dy,cost in directions:
+            nr,nc=curr[0]+dx,curr[1]+dy
+            if 0<=nr<rows and 0<=nc<cols and grid[nr][nc]==0:
+                new_g=g_score[curr]+cost
+                if new_g<g_score.get((nr,nc),float('inf')):
+                    g_score[(nr,nc)]=new_g
+                    came_from[(nr,nc)]=curr
+                    heapq.heappush(open_list,(new_g+heuristic((nr,nc),goal),(nr,nc)))
+    return visited,[]
+
+#  Console 
+def animate_console(grid,start,goal,visited,path):
+    display=[row[:] for row in grid]
+    for idx,cell in enumerate(visited):
+        r,c=cell
+        if cell!=start and cell!=goal: display[r][c]='*'
+        os.system('cls' if sys.platform=='win32' else 'clear')
+        print(f"Exploring node {cell} ({idx+1}/{len(visited)})")
+        for i,row in enumerate(display):
+            print(' '.join('S' if (i,j)==start else 'G' if (i,j)==goal else '#' if val==1 else '.' if val=='*' else 'O' if val=='O' else ' ' for j,val in enumerate(row)))
+        time.sleep(0.03)
+    for r,c in path:
+        if (r,c)!=start and (r,c)!=goal: display[r][c]='O'
+    print("\nFinal Path:")
+    for i,row in enumerate(display):
+        print(' '.join('S' if (i,j)==start else 'G' if (i,j)==goal else '#' if val==1 else 'O' if val=='O' else '.' if val=='*' else ' ' for j,val in enumerate(row)))
+    print("\nLegend: S=Start, G=Goal, #=Obstacle, .=Visited, O=Path\n")
+    time.sleep(1)
+
+#  Pygame 
+def animate_pygame(grid,start,goal,visited,path):
+    pygame.init()
+    rows,cols=len(grid),len(grid[0])
+    size=60
+    screen=pygame.display.set_mode((cols*size,rows*size))
+    pygame.display.set_caption("A* Visualization")
+
+    colors={'white':(255,255,255),'black':(0,0,0),'green':(0,255,0),
+            'red':(255,0,0),'blue':(0,0,255),'grey':(200,200,200)}
+
+    def draw(vis=[],path_cells=[]):
+        screen.fill(colors['white'])
+        for r in range(rows):
+            for c in range(cols):
+                rect=pygame.Rect(c*size,r*size,size,size)
+                pygame.draw.rect(screen, colors['black'] if grid[r][c]==1 else colors['white'], rect)
+                pygame.draw.rect(screen, colors['grey'], rect,1)
+        for r,c in vis:
+            rect=pygame.Rect(c*size,r*size,size,size)
+            # Slight random color for visited cells
+            pygame.draw.rect(screen,(random.randint(150,220),random.randint(150,220),255),rect)
+        for r,c in path_cells:
+            pygame.draw.rect(screen,colors['blue'],pygame.Rect(c*size,r*size,size,size))
+        pygame.draw.rect(screen,colors['green'],pygame.Rect(start[1]*size,start[0]*size,size,size))
+        pygame.draw.rect(screen,colors['red'],pygame.Rect(goal[1]*size,goal[0]*size,size,size))
+        pygame.display.flip()
+
+    clock=pygame.time.Clock()
+    step=0
+    done=False
+    while not done:
+        for event in pygame.event.get():
+            if event.type==pygame.QUIT: done=True
+        if step<len(visited):
+            draw(visited[:step+1],[])
+            step+=1
+        else:
+            draw(visited,path)
+        clock.tick(6)
+    pygame.quit()
+    sys.exit()
+
+#  Main 
+if __name__=="__main__":
+    grid=[
+        [0,0,0,0,0],
+        [1,1,0,1,0],
+        [0,0,0,1,0],
+        [0,1,1,1,0],
+        [0,0,0,0,0]
+    ]
+    start=(0,0)
+    goal=(4,4)
+    visited,path=astar(grid,start,goal)
+    if path: print("Path found!")
+    else: print("No path exists!")
+    animate_console(grid,start,goal,visited,path)
+    animate_pygame(grid,start,goal,visited,path)
+
