@@ -1,4 +1,4 @@
-# 🤖 Robotics_Assignment_Pace_Robotics
+![WhatsApp Image 2025-07-10 at 4 07 31 PM](https://github.com/user-attachments/assets/fa36bf6f-b7b4-4370-af2d-80ab66471f98)# 🤖 Robotics_Assignment_Pace_Robotics
 
 ### ROS 2 Robotics Simulation featuring a Differential Drive Robot with LiDAR-based Obstacle Avoidance  
 Complete with custom URDF, Gazebo world, and autonomous navigation algorithm.
@@ -186,6 +186,10 @@ def laser_callback(self, msg):
 - Real-time obstacle detection and avoidance  
 - Smooth velocity and turning control
 
+## 🎬 Watch Demo on YouTube
+
+[![Watch the video](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)
+
 
 ---
 
@@ -274,5 +278,7 @@ All code is available for learning and reference.
 
 ### 🧡 Built with Passion for Robotics Education  
 Demonstrating autonomous navigation, sensor integration, and ROS 2 development practices.
+
+
 
 
