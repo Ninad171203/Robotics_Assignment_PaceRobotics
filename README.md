@@ -186,9 +186,10 @@ def laser_callback(self, msg):
 - Real-time obstacle detection and avoidance  
 - Smooth velocity and turning control
 
-## 🎬 Watch Demo on YouTube
+## 🎬 Watch Demo Video 
 
-[![Watch the video](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)
+https://drive.google.com/file/d/1eYrbSAdMh0_6x0muNhUKRkxsSmmFsQtg/view?usp=sharing
+
 
 
 ---
