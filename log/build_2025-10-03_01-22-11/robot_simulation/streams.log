@@ -1,0 +1,25 @@
+[0.561s] Invoking command in '/home/vboxuser/robotics_assignment_final/src/robot_simulation': PYTHONPATH=/home/vboxuser/robotics_assignment_final/build/robot_simulation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vboxuser/robotics_assignment_final/install/robot_simulation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_simulation build --build-base /home/vboxuser/robotics_assignment_final/build/robot_simulation/build install --record /home/vboxuser/robotics_assignment_final/build/robot_simulation/install.log --single-version-externally-managed install_data
+[0.732s] running egg_info
+[0.732s] writing ../../build/robot_simulation/robot_simulation.egg-info/PKG-INFO
+[0.732s] writing dependency_links to ../../build/robot_simulation/robot_simulation.egg-info/dependency_links.txt
+[0.732s] writing entry points to ../../build/robot_simulation/robot_simulation.egg-info/entry_points.txt
+[0.733s] writing requirements to ../../build/robot_simulation/robot_simulation.egg-info/requires.txt
+[0.733s] writing top-level names to ../../build/robot_simulation/robot_simulation.egg-info/top_level.txt
+[0.735s] reading manifest file '../../build/robot_simulation/robot_simulation.egg-info/SOURCES.txt'
+[0.737s] writing manifest file '../../build/robot_simulation/robot_simulation.egg-info/SOURCES.txt'
+[0.737s] running build
+[0.737s] running build_py
+[0.737s] copying robot_simulation/obstacle_avoidance.py -> /home/vboxuser/robotics_assignment_final/build/robot_simulation/build/lib/robot_simulation
+[0.737s] running install
+[0.737s] running install_lib
+[0.737s] copying /home/vboxuser/robotics_assignment_final/build/robot_simulation/build/lib/robot_simulation/obstacle_avoidance.py -> /home/vboxuser/robotics_assignment_final/install/robot_simulation/lib/python3.10/site-packages/robot_simulation
+[0.738s] byte-compiling /home/vboxuser/robotics_assignment_final/install/robot_simulation/lib/python3.10/site-packages/robot_simulation/obstacle_avoidance.py to obstacle_avoidance.cpython-310.pyc
+[0.738s] running install_data
+[0.738s] copying urdf/differential_robot.urdf -> /home/vboxuser/robotics_assignment_final/install/robot_simulation/share/robot_simulation/urdf
+[0.741s] running install_egg_info
+[0.741s] removing '/home/vboxuser/robotics_assignment_final/install/robot_simulation/lib/python3.10/site-packages/robot_simulation-1.0.0-py3.10.egg-info' (and everything under it)
+[0.741s] Copying ../../build/robot_simulation/robot_simulation.egg-info to /home/vboxuser/robotics_assignment_final/install/robot_simulation/lib/python3.10/site-packages/robot_simulation-1.0.0-py3.10.egg-info
+[0.741s] running install_scripts
+[0.770s] Installing obstacle_avoidance script to /home/vboxuser/robotics_assignment_final/install/robot_simulation/lib/robot_simulation
+[0.770s] writing list of installed files to '/home/vboxuser/robotics_assignment_final/build/robot_simulation/install.log'
+[0.808s] Invoked command in '/home/vboxuser/robotics_assignment_final/src/robot_simulation' returned '0': PYTHONPATH=/home/vboxuser/robotics_assignment_final/build/robot_simulation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vboxuser/robotics_assignment_final/install/robot_simulation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_simulation build --build-base /home/vboxuser/robotics_assignment_final/build/robot_simulation/build install --record /home/vboxuser/robotics_assignment_final/build/robot_simulation/install.log --single-version-externally-managed install_data

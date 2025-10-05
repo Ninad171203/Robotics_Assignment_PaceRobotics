@@ -1,0 +1,41 @@
+running egg_info
+creating ../../build/robot_simulation/robot_simulation.egg-info
+writing ../../build/robot_simulation/robot_simulation.egg-info/PKG-INFO
+writing dependency_links to ../../build/robot_simulation/robot_simulation.egg-info/dependency_links.txt
+writing entry points to ../../build/robot_simulation/robot_simulation.egg-info/entry_points.txt
+writing requirements to ../../build/robot_simulation/robot_simulation.egg-info/requires.txt
+writing top-level names to ../../build/robot_simulation/robot_simulation.egg-info/top_level.txt
+writing manifest file '../../build/robot_simulation/robot_simulation.egg-info/SOURCES.txt'
+reading manifest file '../../build/robot_simulation/robot_simulation.egg-info/SOURCES.txt'
+writing manifest file '../../build/robot_simulation/robot_simulation.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/vboxuser/robotics_assignment_final/build/robot_simulation/build
+creating /home/vboxuser/robotics_assignment_final/build/robot_simulation/build/lib
+creating /home/vboxuser/robotics_assignment_final/build/robot_simulation/build/lib/robot_simulation
+copying robot_simulation/__init__.py -> /home/vboxuser/robotics_assignment_final/build/robot_simulation/build/lib/robot_simulation
+copying robot_simulation/obstacle_avoidance.py -> /home/vboxuser/robotics_assignment_final/build/robot_simulation/build/lib/robot_simulation
+running install
+running install_lib
+creating /home/vboxuser/robotics_assignment_final/install/robot_simulation/lib/python3.10/site-packages/robot_simulation
+copying /home/vboxuser/robotics_assignment_final/build/robot_simulation/build/lib/robot_simulation/__init__.py -> /home/vboxuser/robotics_assignment_final/install/robot_simulation/lib/python3.10/site-packages/robot_simulation
+copying /home/vboxuser/robotics_assignment_final/build/robot_simulation/build/lib/robot_simulation/obstacle_avoidance.py -> /home/vboxuser/robotics_assignment_final/install/robot_simulation/lib/python3.10/site-packages/robot_simulation
+byte-compiling /home/vboxuser/robotics_assignment_final/install/robot_simulation/lib/python3.10/site-packages/robot_simulation/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/vboxuser/robotics_assignment_final/install/robot_simulation/lib/python3.10/site-packages/robot_simulation/obstacle_avoidance.py to obstacle_avoidance.cpython-310.pyc
+running install_data
+creating /home/vboxuser/robotics_assignment_final/install/robot_simulation/share/ament_index
+creating /home/vboxuser/robotics_assignment_final/install/robot_simulation/share/ament_index/resource_index
+creating /home/vboxuser/robotics_assignment_final/install/robot_simulation/share/ament_index/resource_index/packages
+copying resource/robot_simulation -> /home/vboxuser/robotics_assignment_final/install/robot_simulation/share/ament_index/resource_index/packages
+copying package.xml -> /home/vboxuser/robotics_assignment_final/install/robot_simulation/share/robot_simulation
+creating /home/vboxuser/robotics_assignment_final/install/robot_simulation/share/robot_simulation/urdf
+copying urdf/differential_robot.urdf -> /home/vboxuser/robotics_assignment_final/install/robot_simulation/share/robot_simulation/urdf
+creating /home/vboxuser/robotics_assignment_final/install/robot_simulation/share/robot_simulation/worlds
+copying worlds/simple_obstacles.world -> /home/vboxuser/robotics_assignment_final/install/robot_simulation/share/robot_simulation/worlds
+creating /home/vboxuser/robotics_assignment_final/install/robot_simulation/share/robot_simulation/launch
+copying launch/simulation.launch.py -> /home/vboxuser/robotics_assignment_final/install/robot_simulation/share/robot_simulation/launch
+running install_egg_info
+Copying ../../build/robot_simulation/robot_simulation.egg-info to /home/vboxuser/robotics_assignment_final/install/robot_simulation/lib/python3.10/site-packages/robot_simulation-1.0.0-py3.10.egg-info
+running install_scripts
+Installing obstacle_avoidance script to /home/vboxuser/robotics_assignment_final/install/robot_simulation/lib/robot_simulation
+writing list of installed files to '/home/vboxuser/robotics_assignment_final/build/robot_simulation/install.log'

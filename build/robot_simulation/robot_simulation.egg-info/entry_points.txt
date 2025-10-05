@@ -1,0 +1,3 @@
+[console_scripts]
+obstacle_avoidance = robot_simulation.obstacle_avoidance:main
+
